@@ -10,7 +10,6 @@ export default function Footer() {
                     Test
                 </p>
             </footer>
-            <script src="https://www.netalliance.eu/assets/js/smartsupp.js" async></script>
         </>
     )
 }
