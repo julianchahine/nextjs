@@ -22,17 +22,17 @@ export default function Header() {
                 <section className={styles.topbar}>
                     <div className={styles.container}>
                         <div className={styles.topbarMail}>
-                            <Link href="https://www.netalliance.eu" className={styles.topbarLink}><Image src={mailImage} className="invertWh" width="15" height="15" />www.netalliance.eu</Link>
+                            <Link href="/" className={styles.topbarLink}><Image src={mailImage} className="invertWh" width="15" height="15" />www.company.eu</Link>
                         </div>
                         <div className={styles.topbarPhone}>
-                            <Link href="https://www.netalliance.eu" className={styles.topbarLink}><Image src={phoneImage} className="invertWh" width="15" height="15" />06062 / 956 138</Link>
+                            <Link href="/" className={styles.topbarLink}><Image src={phoneImage} className="invertWh" width="15" height="15" />06062 / 956 138</Link>
                         </div>
                     </div>
                 </section>
                 <section className={styles.navigation}>
                     <div className={styles.container}>
                         <nav className={styles.navbar}>
-                            <Link className={styles.brand} href="https://www.netalliance.eu/"><Image src={logoImage} className={styles.logo} width="211" height="40" alt="NETALLIANCE Logo" title="NETALLIANCE Logo" /></Link>
+                            <Link className={styles.brand} href="/"><Image src={logoImage} className={styles.logo} width="211" height="40" alt="NETALLIANCE Logo" title="NETALLIANCE Logo" /></Link>
                             <label onClick={() => showMenu((prevMenu) => !prevMenu)} className={styles.navToggle}>
                                 <span className={ menu ? styles.burgerClose : ''}></span>
                                 <span className={ menu ? styles.burgerClose : ''}></span>

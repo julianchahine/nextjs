@@ -94,7 +94,7 @@ export default function Home() {
                 <div className={styles.aboutUsLeft}>
                     <h2 className="titleDark">Wir sind kreativ<br />und digital!</h2>
                     <p>
-                        Wir von NETALLIANCE sind ein IT-Dienstleister aus Erbach Odenwald und spezialisiert auf die
+                        Wir von COMPANY sind ein IT-Dienstleister aus Erbach Odenwald und spezialisiert auf die
                         Entwicklung von einzigartigen Webseiten und Applikationen. Wir sind stolz darauf, qualitativ hochwertige
                         Lösungen zu liefern, die den Umsatz und Gewinn unserer Kunden maximieren. Unser Team bleibt stets auf dem
                         neuesten Stand und beobachtet die Entwicklungen neuer Technologien, so dass unsere Projekte stets
@@ -134,7 +134,7 @@ export default function Home() {
                             Erhalten Sie eine kostenlose Beratung und lassen Sie uns gemeinsam über Ihre Anforderungen und Ziele sprechen.
                         </p>
                         <p className={styles.consultDescription}>
-                            NETALLIANCE unterstützt Sie gerne dabei, die beste Lösung für Ihr Unternehmen zu finden.
+                            COMPANY unterstützt Sie gerne dabei, die beste Lösung für Ihr Unternehmen zu finden.
                         </p>
                     </div>
                     <div className={styles.consultUsRight}>
