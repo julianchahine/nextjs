@@ -1,7 +1,6 @@
 import styles from './page.module.css'
 import './globals.css'
 
-import sliderImage from './_images/sliderImage.webp'
 import circlesImage from './_images/circles.svg'
 import webDevImage from './_images/webDev.svg'
 import iMacsImage from './_images/imacs.webp'
@@ -30,7 +29,7 @@ export default function Home() {
                         </h2>
                     </div>
                     <div className={styles.sliderRight}>
-                        <Image src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
+                        
                     </div>
                 </div>
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
