@@ -100,10 +100,6 @@ h2 {
   font-family: "Alfa Slab One";
   color: #121212;
   font-size: 40px;
-  
-  @media screen and (max-width: 1000px) {
-    font-size: 30px;
-  }
 }
 
 .description {
@@ -130,4 +126,10 @@ h2 {
 
 .fwContainer {
   width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .titleDark {
+    font-size: 30px;
+  }
 }

@@ -381,10 +381,20 @@
     display: none;
   }
 
+  .slider .container {
+    flex-direction: column !important;
+    margin-top: -5em;
+  }
+
+  .sliderLeft, .sliderRight {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
   .slider .container .sliderLeft .sliderDescription {
     width: 100%;
-    text-align: center;
-    margin-top: -5em;
+    text-align: center !important;
     font-size: 18px;
   }
 
@@ -397,10 +407,10 @@
   }
 
   .sliderImage {
-    max-width: 80%;
+    max-width: 80% !important; 
     align-items: center;
     justify-content: center;
-    padding-top: 5em;
+    padding-top: 2em;
   }
 
   .getOffer .titel {
@@ -449,13 +459,15 @@
 
 @media screen and (max-width: 950px) {
   .wrapper {
-    flex-direction: column;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     margin: 1em 0 0 0 !important;
   }
 
   .wrapper .box {
-    width: 100%;
-    height: auto;
-    margin: 1.5em 0;
+    width: 100% !important;
+    height: auto !important;
+    margin: 1.5em 0 !important;
   }
 }
