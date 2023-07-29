@@ -5,9 +5,6 @@ import circlesImage from './_images/circles.svg'
 import webDevImage from './_images/webDev.svg'
 import iMacsImage from './_images/imacs.webp'
 
-import Link from 'next/link'
-import Image from 'next/image'
-
 import ValueBox from './_components/valuebox/valuebox'
 import ServiceBox from './_components/servicebox/servicebox.js'
 
@@ -29,7 +26,7 @@ export default function Home() {
                         </h2>
                     </div>
                     <div className={styles.sliderRight}>
-                        <img src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
+                  
                     </div>
                 </div>
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
