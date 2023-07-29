@@ -1,0 +1,60 @@
+.valueBox {
+    padding: 1em 0;
+    font-family: "alfa slab one";
+    width: 25%;
+    text-align: center;
+    transition: .6s;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    .valueTitle {
+        font-size: 55px;
+        font-family: var(--title-font);
+    }
+
+    .valueDescription {
+        font-size: 20px;
+        color: #7b7b7b;
+        font-family: "Raleway";
+    }
+}
+
+.valueBox:nth-of-type(odd) {
+    background: rgb(245, 245, 245);
+}
+
+.valueBox:hover {
+    background: var(--primary);
+    color: #fff;
+
+    .valueDescription {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .valueBox {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .valueBox {
+        padding: .75em 0 !important;
+    }
+
+    @media screen and (max-width: 768px) {
+        .valueTitle {
+            font-size: 28px !important;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .valueDescription {
+            font-size: 18px !important;
+        }
+    }
+}
