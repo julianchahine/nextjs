@@ -5,9 +5,7 @@
     width: 100%;
     z-index: 9999;
     transition: 0.5s;
-
 }
-
 
 .topbar {
     width: 100%;
@@ -18,16 +16,15 @@
     background-size: 200% 100%;
     animation: gradient-animation 6s ease infinite;
     transition: 0.5s;
-
-    .topbarLink {
-        color: #fff;
-
-        .topbarLink:hover {
-            color: black;
-        }
-    }
 }
 
+.topbar .topbarLink {
+    color: #fff;
+}
+
+.topbar .topbarLink .topbarLink:hover {
+    color: black;
+}
 
 @keyframes gradient-animation {
     0% {
@@ -56,8 +53,6 @@
         background-position: 0% 50%;
     }
 }
-
-
 
 .topbar .container {
     max-width: 1300px;
@@ -102,10 +97,7 @@
     flex-direction: row-reverse;
 }
 
-
-
 /******** NAVIGATION **********/
-
 .navigation {
     background: #fff;
     padding: 1.5em 0;
@@ -118,7 +110,7 @@
 }
 
 .navigation .container a {
-    color: rgb(155, 155, 155);
+    color: #9b9b9b;
     font-family: "Raleway";
 }
 
@@ -136,7 +128,7 @@
     align-items: center;
     max-width: 1340px;
     margin: 0 auto;
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .header .navbar .brand {
@@ -150,7 +142,7 @@
 }
 
 .logo {
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .header .navbar .menu {
@@ -170,39 +162,8 @@
     transition: all 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**** MENU ****/
-
 @media only screen and (max-width: 1000px) {
-
     .header .navbar .wrapper {
         position: fixed;
         top: 0;
@@ -248,7 +209,7 @@
         color: #fff;
         font-size: 1rem;
         font-weight: 600;
-        transition: .5s;
+        transition: 0.5s;
     }
 
     .header .navbar .navToggle {
@@ -269,7 +230,7 @@
         background: #000;
         border-radius: 2px;
         margin-left: 4px;
-        transition: .6s;
+        transition: 0.6s;
     }
 
     .mobileActive {
@@ -295,10 +256,7 @@
         background: #000 !important;
     }
 
-    .navToggle {}
-
     .navToggle span {
         margin: 4px;
     }
-
 }

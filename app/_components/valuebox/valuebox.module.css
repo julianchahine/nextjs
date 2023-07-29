@@ -9,18 +9,19 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-
-    .valueTitle {
-        font-size: 55px;
-        font-family: var(--title-font);
-    }
-
-    .valueDescription {
-        font-size: 20px;
-        color: #7b7b7b;
-        font-family: "Raleway";
-    }
 }
+
+.valueBox .valueTitle {
+    font-size: 55px;
+    font-family: var(--title-font);
+}
+
+.valueBox .valueDescription {
+    font-size: 20px;
+    color: #7b7b7b;
+    font-family: "Raleway";
+}
+
 
 .valueBox:nth-of-type(odd) {
     background: rgb(245, 245, 245);
@@ -29,10 +30,14 @@
 .valueBox:hover {
     background: var(--primary);
     color: #fff;
+}
 
-    .valueDescription {
-        color: #fff;
-    }
+.valueBox .valueDescription {
+    color: #000;
+}
+
+.valueBox:hover .valueDescription, .valueBox:hover .valueTitle {
+    color: #fff !important;
 }
 
 @media screen and (max-width: 1070px) {

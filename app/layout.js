@@ -14,9 +14,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <head>
-        <script src="https://www.netalliance.eu/assets/js/smartsupp.js" defer></script>
-      </head>
       <body>
 
         <Header />
