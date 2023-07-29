@@ -377,7 +377,7 @@ export default function Home() {
             {/************ Questions **************
              ***********************************/}
 
-            <section className={styles.getOffer + ' ' + styles.mt}>
+            <section className={styles.getOffer + ' ' + styles.mt + ' ' + styles.questions}>
                 <div className={styles.line}></div>
                 <div className={styles.getOfferBg}>
                     F
