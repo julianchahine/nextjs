@@ -8,16 +8,18 @@
   animation: gradient-animation 6s ease infinite;
   min-width: 100%;
 
-  .container {
-    max-width: 1300px;
-    display: flex;
-    margin: 0 auto;
-    padding: 8em 8px 13em 8px;
+  
+}
 
-    @media screen and (max-width: 1000px) {
-      flex-direction: column;
-      padding-bottom: 7em;
-    }
+.container {
+  max-width: 1300px;
+  display: flex;
+  margin: 0 auto;
+  padding: 8em 8px 13em 8px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    padding-bottom: 7em;
   }
 }
 
