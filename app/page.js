@@ -1,3 +1,4 @@
+"use client";
 import styles from './page.module.css'
 import './globals.css'
 
@@ -11,6 +12,28 @@ import Image from 'next/image'
 
 import ValueBox from './_components/valuebox/valuebox'
 import ServiceBox from './_components/servicebox/servicebox.js'
+
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
+function Animation({ children }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    return (
+        <section ref={ref}>
+            <span
+                style={{
+                    transform: isInView ? "none" : "translateX(-200px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                }}
+            >
+                {children}
+            </span>
+        </section>
+    );
+}
 
 
 export default function Home() {
@@ -74,15 +97,16 @@ export default function Home() {
             {/************ Values**************
              ***********************************/}
 
-            <section className={styles.companyValue}>
-                <div className={styles.container}>
-                    <ValueBox titel="15+" description="Jahre Erfahrung" />
-                    <ValueBox titel="21+" description="Abgeschlossene Projekte" />
-                    <ValueBox titel="7" description="Entwickler & Designer" />
-                    <ValueBox titel="100%" description="Zufriedene Kunden" />
-                </div>
-            </section>
-
+            <Animation>
+                <section className={styles.companyValue}>
+                    <div className={styles.container}>
+                        <ValueBox titel="15+" description="Jahre Erfahrung" />
+                        <ValueBox titel="21+" description="Abgeschlossene Projekte" />
+                        <ValueBox titel="7" description="Entwickler & Designer" />
+                        <ValueBox titel="100%" description="Zufriedene Kunden" />
+                    </div>
+                </section>
+            </Animation>
 
             {/************ ABOUT **************
              ***********************************/}
