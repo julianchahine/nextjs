@@ -8,14 +8,14 @@ import Footer from './_parts/footer/footer.js'
 
 import { AnimatePresence } from 'framer-motion'
 
-export const metadata = {
-  title: 'NETALLIANCE | Inspire & Succeed',
-  description: 'Created by Julian Chahine',
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
+      <head>
+        <title>
+          NETALLIANCE | Inspire & Succeed
+        </title>
+      </head>
       <body>
 
         <Header />
