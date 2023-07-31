@@ -33,6 +33,22 @@ body {
 }
 
 
+@font-face {
+  font-family: alfa slab one;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alfa Slab One'), url(./_fonts/AlfaSlabOne-Regular.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: raleway;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(./_fonts/Raleway-Regular.woff) format('woff');
+  font-display: swap;
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
