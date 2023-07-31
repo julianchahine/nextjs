@@ -5,11 +5,6 @@ import Link from 'next/link'
 
 import { motion } from 'framer-motion'
 
-export const metadata = {
-  title: 'Impressum - NETALLIANCE | Inspire & Succeed',
-  description: 'Created by Julian Chahine',
-}
-
 export default function Impressum() {
   return (
     <>  

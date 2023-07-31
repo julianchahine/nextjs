@@ -4,10 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { motion } from 'framer-motion'
-export const metadata = {
-  title: 'Kontakt - NETALLIANCE | Inspire & Succeed',
-  description: 'Created by Julian Chahine',
-}
 
 export default function Kontakt() {
   return (
