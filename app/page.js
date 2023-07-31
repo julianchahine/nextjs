@@ -1,4 +1,3 @@
-"use client";
 import styles from './page.module.css'
 import './globals.css'
 
@@ -13,38 +12,30 @@ import Image from 'next/image'
 import ValueBox from './_components/valuebox/valuebox'
 import ServiceBox from './_components/servicebox/servicebox.js'
 
-import { motion } from 'framer-motion';
 
 export default function Home() {
     return (
-        <>  
-        <motion.div
-     exit={{ opacity: 0 }}
-     initial={{ opacity: 0 }}
-     animate={{ opacity: 1 }}
-     transition={{ duration: 0.5 }}
-   >
-                <section className={styles.slider}>
-                    <div className={styles.container}>
-                        <div className={styles.sliderLeft}>
-                            <h1 className={styles.title}>
-                                Einzigartige Weblösungen
-                            </h1>
-                            <h2 className={styles.sliderDescription}>
-                                Mit welchen wir Ihre Beliebtheit, Umsätze und Gewinne steigern.
-                            </h2>
-                            <h2 className={styles.sliderDescription}>
-                                Gemeinsam mit unseren erfahrenen Experten verhelfen wir Ihnen zum digitalen Erfolg.
-                            </h2>
-                        </div>
-                        <div className={styles.sliderRight}>
-                            <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
-                        </div>
+        <>
+            <section className={styles.slider}>
+                <div className={styles.container}>
+                    <div className={styles.sliderLeft}>
+                        <h1 className={styles.title}>
+                            Einzigartige Weblösungen
+                        </h1>
+                        <h2 className={styles.sliderDescription}>
+                            Mit welchen wir Ihre Beliebtheit, Umsätze und Gewinne steigern.
+                        </h2>
+                        <h2 className={styles.sliderDescription}>
+                            Gemeinsam mit unseren erfahrenen Experten verhelfen wir Ihnen zum digitalen Erfolg.
+                        </h2>
                     </div>
-                    <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
-                    <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
-                </section >
-                </motion.div>
+                    <div className={styles.sliderRight}>
+                        <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
+                    </div>
+                </div>
+                <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
+                <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
+            </section >
 
             {/************Get Offer**************
              ***********************************/}
@@ -80,62 +71,62 @@ export default function Home() {
                 </div>
             </section>
 
-
-
-
             {/************ Values**************
              ***********************************/}
 
-                <section className={styles.companyValue}>
-                    <div className={styles.container}>
-                        <ValueBox titel="15+" description="Jahre Erfahrung" />
-                        <ValueBox titel="21+" description="Abgeschlossene Projekte" />
-                        <ValueBox titel="7" description="Entwickler & Designer" />
-                        <ValueBox titel="100%" description="Zufriedene Kunden" />
-                    </div>
-                </section>
+            <section className={styles.companyValue}>
+                <div className={styles.container}>
+                    <ValueBox titel="15+" description="Jahre Erfahrung" />
+                    <ValueBox titel="21+" description="Abgeschlossene Projekte" />
+                    <ValueBox titel="7" description="Entwickler & Designer" />
+                    <ValueBox titel="100%" description="Zufriedene Kunden" />
+                </div>
+            </section>
+
 
             {/************ ABOUT **************
              ***********************************/}
-                < section className={styles.aboutUs + ' ' + 'container'} >
-                    <div className={styles.aboutUsBg}>
-                        W
-                    </div>
-                    <div className={styles.aboutUsLeft}>
-                        <h2 className="titleDark">Wir sind kreativ<br />und digital!</h2>
-                        <p>
-                            Wir von COMPANY sind ein IT-Dienstleister aus Erbach Odenwald und spezialisiert auf die
-                            Entwicklung von einzigartigen Webseiten und Applikationen. Wir sind stolz darauf, qualitativ hochwertige
-                            Lösungen zu liefern, die den Umsatz und Gewinn unserer Kunden maximieren. Unser Team bleibt stets auf dem
-                            neuesten Stand und beobachtet die Entwicklungen neuer Technologien, so dass unsere Projekte stets
-                            State-of-the-Art Technologies nutzen und den beliebtesten und erfolgreichsten Designtrends folgen
-                            und dabei neue Maßstäbe setzen.
-                            <br /><br />
-                            Dadurch gestalten wir moderne und hochtechnologische Lösungen, die unsere Kunden von der
-                            Konkurrenz abheben
-                            und ihr Geschäftspotenzial voll ausschöpfen. Vertrauen Sie unserer Expertise und lassen Sie uns
-                            gemeinsam
-                            Ihren digitalen Erfolg verwirklichen.
-                            <br /><br />
-                            Als Partner begleiten wir Sie Seite an Seite und stehen Ihnen auch nach Abschluss der Projekte
-                            stets für
-                            alle Angelegenheiten, Fragen und Unternehmungen zur Verfügung.
-                        </p>
-                    </div>
-                    <div className={styles.aboutUsRight}>
 
-                        <ServiceBox titel="Webentwicklung" description="Professionelle Webentwicklung für moderne und ansprechende Online-Lösungen, maßgeschneidert für Ihr Unternehmen, mit und ohne CMS." image={webDevImage} alt="Alt" title="Titel" />
-                        <ServiceBox titel="Online-Shops" description="Effiziente Online-Shop Entwicklung für erfolgreichen E-Commerce mit kundenorientierten Funktionen und ansprechendem Design." image={webDevImage} alt="Alt" title="Titel" />
-                        <ServiceBox titel="Landing Pages" description="Kreative Landing Page Gestaltung, um Besucher zu überzeugen und Ihre Conversion-Raten zu steigern." image={webDevImage} alt="Alt" title="Titel" />
-                        <ServiceBox titel="Grafik- und Printdesign" description="Maßgeschneidertes Grafik- und Printdesign, das Ihre Marke/Firma zum Strahlen bringt und Aufmerksamkeit erzeugt." image={webDevImage} alt="Alt" title="Titel" />
+            <section className={styles.aboutUs + ' ' + 'container'}>
+                <div className={styles.aboutUsBg}>
+                    W
+                </div>
+                <div className={styles.aboutUsLeft}>
+                    <h2 className="titleDark">Wir sind kreativ<br />und digital!</h2>
+                    <p>
+                        Wir von COMPANY sind ein IT-Dienstleister aus Erbach Odenwald und spezialisiert auf die
+                        Entwicklung von einzigartigen Webseiten und Applikationen. Wir sind stolz darauf, qualitativ hochwertige
+                        Lösungen zu liefern, die den Umsatz und Gewinn unserer Kunden maximieren. Unser Team bleibt stets auf dem
+                        neuesten Stand und beobachtet die Entwicklungen neuer Technologien, so dass unsere Projekte stets
+                        State-of-the-Art Technologies nutzen und den beliebtesten und erfolgreichsten Designtrends folgen
+                        und dabei neue Maßstäbe setzen.
+                        <br /><br />
+                        Dadurch gestalten wir moderne und hochtechnologische Lösungen, die unsere Kunden von der
+                        Konkurrenz abheben
+                        und ihr Geschäftspotenzial voll ausschöpfen. Vertrauen Sie unserer Expertise und lassen Sie uns
+                        gemeinsam
+                        Ihren digitalen Erfolg verwirklichen.
+                        <br /><br />
+                        Als Partner begleiten wir Sie Seite an Seite und stehen Ihnen auch nach Abschluss der Projekte
+                        stets für
+                        alle Angelegenheiten, Fragen und Unternehmungen zur Verfügung.
+                    </p>
+                </div>
+                <div className={styles.aboutUsRight}>
 
-                    </div>
-                </section >
+                    <ServiceBox titel="Webentwicklung" description="Professionelle Webentwicklung für moderne und ansprechende Online-Lösungen, maßgeschneidert für Ihr Unternehmen, mit und ohne CMS." image={webDevImage} alt="Alt" title="Titel" />
+                    <ServiceBox titel="Online-Shops" description="Effiziente Online-Shop Entwicklung für erfolgreichen E-Commerce mit kundenorientierten Funktionen und ansprechendem Design." image={webDevImage} alt="Alt" title="Titel" />
+                    <ServiceBox titel="Landing Pages" description="Kreative Landing Page Gestaltung, um Besucher zu überzeugen und Ihre Conversion-Raten zu steigern." image={webDevImage} alt="Alt" title="Titel" />
+                    <ServiceBox titel="Grafik- und Printdesign" description="Maßgeschneidertes Grafik- und Printdesign, das Ihre Marke/Firma zum Strahlen bringt und Aufmerksamkeit erzeugt." image={webDevImage} alt="Alt" title="Titel" />
+
+                </div>
+            </section>
+
 
             {/************ CONSULT **************
              ***********************************/}
 
-            < section className={styles.consultUs + ' ' + 'fwContainer'} >
+            <section className={styles.consultUs + ' ' + 'fwContainer'}>
                 <div className="container">
                     <div className={styles.consultUsLeft}>
                         <h2 className={styles.consultTitle}>Vereinbaren Sie eine<br />kostenlose Beratung.</h2>
@@ -152,13 +143,13 @@ export default function Home() {
 
                     </div>
                 </div>
-            </section >
+            </section>
 
 
             {/************ STEPS **************
              ***********************************/}
 
-            < section className="container" >
+            <section className="container">
                 <div class={styles.steps}>
                     <h3 className="titleDark">
                         Der Ablauf im Überblick
@@ -216,14 +207,14 @@ export default function Home() {
 
                     </div>
                 </div>
-            </section >
+            </section>
 
 
 
             {/************ Costs **************
              ***********************************/}
 
-            < section className={styles.fwContainer + ' ' + styles.costsBg} >
+            <section className={styles.fwContainer + ' ' + styles.costsBg}>
                 <div className={'container' + ' ' + styles.costs}>
                     <h2 className="titleDark">
                         Welche Kosten?
@@ -380,13 +371,13 @@ export default function Home() {
 
                     </div>
                 </div>
-            </section >
+            </section>
 
 
             {/************ Questions **************
              ***********************************/}
 
-            < section className={styles.getOffer + ' ' + styles.mt + ' ' + styles.questions} >
+            <section className={styles.getOffer + ' ' + styles.mt + ' ' + styles.questions}>
                 <div className={styles.line}></div>
                 <div className={styles.getOfferBg}>
                     F
@@ -415,7 +406,7 @@ export default function Home() {
                         </div>
                     </form>
                 </div>
-            </section >
+            </section>
 
         </>
     )
