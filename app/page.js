@@ -15,6 +15,7 @@ import ServiceBox from './_components/servicebox/servicebox.js'
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { motion } from 'framer-motion';
 
 function Animation({ children }) {
     const ref = useRef(null);
@@ -35,27 +36,28 @@ function Animation({ children }) {
     );
 }
 
-
 export default function Home() {
     return (
         <>
             <section className={styles.slider}>
-                <div className={styles.container}>
-                    <div className={styles.sliderLeft}>
-                        <h1 className={styles.title}>
-                            Einzigartige Weblösungen
-                        </h1>
-                        <h2 className={styles.sliderDescription}>
-                            Mit welchen wir Ihre Beliebtheit, Umsätze und Gewinne steigern.
-                        </h2>
-                        <h2 className={styles.sliderDescription}>
-                            Gemeinsam mit unseren erfahrenen Experten verhelfen wir Ihnen zum digitalen Erfolg.
-                        </h2>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                    <div className={styles.container}>
+                        <div className={styles.sliderLeft}>
+                            <h1 className={styles.title}>
+                                Einzigartige Weblösungen
+                            </h1>
+                            <h2 className={styles.sliderDescription}>
+                                Mit welchen wir Ihre Beliebtheit, Umsätze und Gewinne steigern.
+                            </h2>
+                            <h2 className={styles.sliderDescription}>
+                                Gemeinsam mit unseren erfahrenen Experten verhelfen wir Ihnen zum digitalen Erfolg.
+                            </h2>
+                        </div>
+                        <div className={styles.sliderRight}>
+                            <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
+                        </div>
                     </div>
-                    <div className={styles.sliderRight}>
-                        <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
-                    </div>
-                </div>
+                </motion.div>
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
             </section >
@@ -137,12 +139,10 @@ export default function Home() {
                     </p>
                 </div>
                 <div className={styles.aboutUsRight}>
-
                     <ServiceBox titel="Webentwicklung" description="Professionelle Webentwicklung für moderne und ansprechende Online-Lösungen, maßgeschneidert für Ihr Unternehmen, mit und ohne CMS." image={webDevImage} alt="Alt" title="Titel" />
                     <ServiceBox titel="Online-Shops" description="Effiziente Online-Shop Entwicklung für erfolgreichen E-Commerce mit kundenorientierten Funktionen und ansprechendem Design." image={webDevImage} alt="Alt" title="Titel" />
                     <ServiceBox titel="Landing Pages" description="Kreative Landing Page Gestaltung, um Besucher zu überzeugen und Ihre Conversion-Raten zu steigern." image={webDevImage} alt="Alt" title="Titel" />
                     <ServiceBox titel="Grafik- und Printdesign" description="Maßgeschneidertes Grafik- und Printdesign, das Ihre Marke/Firma zum Strahlen bringt und Aufmerksamkeit erzeugt." image={webDevImage} alt="Alt" title="Titel" />
-
                 </div>
             </section>
 
@@ -162,9 +162,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className={styles.consultUsRight}>
-
                         <Image src={iMacsImage} width="450" height="310" className={styles.consultImage} />
-
                     </div>
                 </div>
             </section>
@@ -392,7 +390,6 @@ export default function Home() {
                                 Auf Anfrage
                             </span>
                         </div>
-
                     </div>
                 </div>
             </section>
