@@ -112,6 +112,11 @@
 .navigation .container a {
     color: #9b9b9b;
     font-family: "Raleway";
+    transition: .5s;
+}
+
+.navigation .container a:hover {
+    color: var(--primary) !important;
 }
 
 .active {

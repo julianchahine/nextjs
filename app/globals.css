@@ -77,9 +77,14 @@ body {
   }
 }
 
+
 a {
-  transition: .5s;
+  transition: 5.5s;
   color: black;
+}
+
+a:hover {
+  color: green;
 }
 
 p {
