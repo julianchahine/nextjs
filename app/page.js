@@ -1,4 +1,3 @@
-"use client";
 import styles from './page.module.css'
 import './globals.css'
 
@@ -13,34 +12,10 @@ import Image from 'next/image'
 import ValueBox from './_components/valuebox/valuebox'
 import ServiceBox from './_components/servicebox/servicebox.js'
 
-import { useRef } from "react";
-import { useInView } from "framer-motion";
-import { motion } from 'framer-motion';
-
-function Animation({ children }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    return (
-        <section ref={ref}>
-            <span
-                style={{
-                    transform: isInView ? "none" : "translateX(-200px)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }}
-            >
-                {children}
-            </span>
-        </section>
-    );
-}
-
 export default function Home() {
     return (
         <>
             <section className={styles.slider}>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                     <div className={styles.container}>
                         <div className={styles.sliderLeft}>
                             <h1 className={styles.title}>
@@ -57,7 +32,6 @@ export default function Home() {
                             <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="600" height="500" alt="" title="" />
                         </div>
                     </div>
-                </motion.div>
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />
             </section >
@@ -99,7 +73,6 @@ export default function Home() {
             {/************ Values**************
              ***********************************/}
 
-            <Animation>
                 <section className={styles.companyValue}>
                     <div className={styles.container}>
                         <ValueBox titel="15+" description="Jahre Erfahrung" />
@@ -108,7 +81,6 @@ export default function Home() {
                         <ValueBox titel="100%" description="Zufriedene Kunden" />
                     </div>
                 </section>
-            </Animation>
 
             {/************ ABOUT **************
              ***********************************/}
