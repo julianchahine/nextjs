@@ -1,3 +1,9 @@
+.mainStart {
+    position: relative;
+    top: 0;
+    z-index: 999 !important;
+  }
+
 .main {
     position: relative;
     top: 131px;

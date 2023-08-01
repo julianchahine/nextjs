@@ -7,7 +7,7 @@
     transition: 0.5s;
 }
 
-.topbar {
+.header .topbar {
     width: 100%;
     height: auto;
     padding: 0px;
@@ -18,12 +18,34 @@
     transition: 0.5s;
 }
 
-.topbar .topbarLink {
+.headerNoScroll .topbarScroll {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0;
+    background: var(--primary);
+    transition: 0.5s;
+}
+
+.header .topbar, .header .topbarScroll {
+    background: var(--primary);
+}
+
+.topbarLink {
     color: #fff;
+    max-width: max-content;
 }
 
 .topbar .topbarLink .topbarLink:hover {
     color: black;
+}
+
+.logoInvert {
+    filter: brightness(0) invert(1);
+}
+
+.noInvert {
+    filter: unset !important;
 }
 
 @keyframes gradient-animation {
@@ -54,7 +76,39 @@
     }
 }
 
+.headerNoScroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.headerNoScroll .topbar {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0;
+    background: transparent;
+    transition: 0.5s;
+}
+
 .topbar .container {
+    max-width: 1300px;
+    height: auto;
+    padding: 8px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: unset;
+}
+
+.topbarScroll .container {
     max-width: 1300px;
     height: auto;
     padding: 8px;
@@ -97,10 +151,37 @@
     flex-direction: row-reverse;
 }
 
+.topbarScroll a {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.topbarScroll a:hover {
+    color: #083970;
+}
+
+.topbarPhone a {
+    flex-direction: row-reverse;
+}
+
 /******** NAVIGATION **********/
 .navigation {
-    background: #fff;
     padding: 1.5em 0;
+    transition: 1s;
+}
+
+.header .navigation {
+    background: #fff;
+}
+
+.navigationScroll {
+    background: #fff;
 }
 
 .navigation .container {
@@ -124,7 +205,7 @@
     color: var(--primary) !important;
 }
 
-.header .navbar {
+.navbar {
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -136,7 +217,7 @@
     transition: 0.6s;
 }
 
-.header .navbar .brand {
+.navbar .brand {
     font-family: inherit;
     font-size: 1.75rem;
     font-weight: 700;
@@ -147,10 +228,10 @@
 }
 
 .logo {
-    transition: 0.6s;
+    transition: 1s;
 }
 
-.header .navbar .menu {
+.navbar .menu {
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -159,17 +240,17 @@
     align-items: center;
 }
 
-.header .navbar .menuItem:not(:first-child) {
+.navbar .menuItem:not(:first-child) {
     margin-left: 2rem;
 }
 
-.header .navbar .wrapper {
+.navbar .wrapper {
     transition: all 0.3s ease;
 }
 
 /**** MENU ****/
 @media only screen and (max-width: 1000px) {
-    .header .navbar .wrapper {
+    .navbar .wrapper {
         position: fixed;
         top: 0;
         left: 0;
@@ -184,7 +265,7 @@
         animation: gradient-animation 4s ease infinite;
     }
 
-    .header .navbar .wrapper .menu {
+    .navbar .wrapper .menu {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -198,18 +279,18 @@
         opacity: 1 !important;
     }
 
-    .header .navbar .wrapper .menuItem {
+    .navbar .wrapper .menuItem {
         width: 100%;
         display: flex;
         justify-content: center;
         margin: 1.5em 0 0 0;
     }
 
-    .header .navbar .wrapper .menuItem:not(:first-child) {
+    .navbar .wrapper .menuItem:not(:first-child) {
         margin-left: 0;
     }
 
-    .header .navbar .wrapper .menuItem a {
+    .navbar .wrapper .menuItem a {
         opacity: 1;
         color: #fff;
         font-size: 1rem;
@@ -217,7 +298,7 @@
         transition: 0.5s;
     }
 
-    .header .navbar .navToggle {
+    .navbar .navToggle {
         display: block;
         position: relative;
         right: -12px;
@@ -228,7 +309,7 @@
         z-index: 999;
     }
 
-    .header .navbar .navToggle span {
+    .navbar .navToggle span {
         display: block;
         width: 20px;
         height: 2px;
@@ -264,4 +345,20 @@
     .navToggle span {
         margin: 4px;
     }
+}
+
+.headerNoScroll .navigation .container a {
+    color: #ffffff70;
+}
+
+.headerNoScroll .navigationScroll .container a {
+    color: #9b9b9b;
+}
+
+.headerNoScroll .active {
+    color: #fff !important;
+}
+
+.headerNoScroll .navigationScroll .active {
+    color: var(--primary) !important;
 }
