@@ -29,7 +29,7 @@ export default function Home() {
                             </h2>
                         </div>
                         <div className={styles.sliderRight}>
-                            <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="200" height="100" alt="" title="" />
+                            <Image loading="eager" src={sliderImage} className={styles.sliderImage} width="auto" height="auto" alt="" title="" />
                         </div>
                     </div>
                 <Image src={circlesImage} className={styles.circlesImage} width="50" height="50" alt="" title="" />

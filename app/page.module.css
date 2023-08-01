@@ -385,7 +385,7 @@
 
   .slider .container {
     flex-direction: column !important;
-    margin-top: -5em;
+    margin-top: -3em;
   }
 
   .sliderLeft, .sliderRight {
