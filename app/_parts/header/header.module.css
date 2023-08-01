@@ -172,8 +172,8 @@
 
 /******** NAVIGATION **********/
 .navigation {
-    padding: 1.5em 0;
-    transition: 1s;
+    padding: 2.5em 0;
+    transition: .5s;
 }
 
 .header .navigation {
@@ -182,6 +182,7 @@
 
 .navigationScroll {
     background: #fff;
+    padding: 1.5em 0;
 }
 
 .navigation .container {

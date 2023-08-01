@@ -101,7 +101,8 @@
 }
 
 .sliderImage {
-  max-width: 80%;
+  max-width: 510px;
+  width: 510px;
   height: auto;
 }
 
